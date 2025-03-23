@@ -1,0 +1,329 @@
+/* 🌟 General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #121212, #4b0082, #d308ea);
+    color: #fff;
+    scroll-behavior: smooth;
+}
+
+/* 🌟 Navigation Bar */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 15px 0;
+    z-index: 100;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: #0ff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff0;
+}
+
+/* 🌟 Hero Section */
+#home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #000000, #290053, #d103fa);
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #0ff;
+    margin-bottom: 15px;
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+h1 {
+    font-size: 36px;
+    margin: 10px 0;
+}
+
+.neon-text {
+    color: #0ff;
+    text-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+}
+
+p {
+    font-size: 18px;
+    color: #bbb;
+}
+
+/* 🌟 Buttons */
+.btn, .project-link {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #0ff;
+    color: #121212;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.btn:hover, .project-link:hover {
+    background: #ff0;
+    transform: scale(1.05);
+}
+
+/* 🌟 Projects Section */
+#projects {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.project-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.project {
+    background: rgba(34, 34, 34, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 320px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.6);
+}
+
+.project img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* 🌟 About Section */
+#about {
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 900px;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+    text-align: left;
+    transition: transform 0.3s ease-in-out;
+}
+
+.about-container:hover {
+    transform: scale(1.02);
+}
+
+/* Profile Image in About */
+.profile {
+    flex: 1;
+    text-align: center;
+}
+
+.profile img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #0ff;
+}
+
+/* Bio Section */
+.bio {
+    flex: 2;
+    padding-left: 30px;
+}
+
+.bio h2 {
+    color: #0ff;
+    margin-bottom: 10px;
+}
+
+.bio p {
+    font-size: 16px;
+    color: #ddd;
+    line-height: 1.6;
+}
+
+/* Section Styling */
+.about-section {
+    text-align: center;
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.about-section:hover {
+    transform: scale(1.02);
+}
+
+h2 {
+    color: #0ff;
+}
+
+/* Key Skills */
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.skills span {
+    background: rgba(0, 255, 255, 0.2);
+    color: #0ff;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: transform 0.3s ease;
+}
+
+.skills span:hover {
+    transform: scale(1.1);
+}
+
+/* 🌟 Responsive Design */
+@media (max-width: 768px) {
+    .about-container, .project-grid {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .bio {
+        padding-left: 0;
+    }
+
+    .project {
+        width: 90%;
+    }
+}
+/* 🌟 Contact Section */
+#contact {
+    text-align: center;
+    padding: 60px 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 50px auto;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+}
+
+#contact h2 {
+    color: #0ff;
+    margin-bottom: 15px;
+}
+
+#contact p {
+    font-size: 18px;
+    color: #bbb;
+    margin-bottom: 20px;
+}
+
+/* 🌟 Contact Form */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form input, form textarea {
+    width: 90%;
+    max-width: 500px;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 5px;
+    border: none;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-size: 16px;
+}
+
+form input:focus, form textarea:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.4);
+}
+
+form button {
+    width: 90%;
+    max-width: 500px;
+    padding: 12px;
+    background: #0ff;
+    color: #121212;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+form button:hover {
+    background: #ff0;
+    transform: scale(1.05);
+}
+
+/* 🌟 Social Links */
+.social-links {
+    margin-top: 20px;
+}
+
+.social-btn {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 15px;
+    background: #0ff;
+    color: #121212;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.social-btn:hover {
+    background: #ff0;
+    transform: scale(1.05);
+}
