@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammed Abnan - Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('projects') }}">Projects</a></li>
+                <li><a href="{{ url_for('about') }}">About</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home">
+        <div class="hero-content">
+            <img src="{{ url_for('static', filename='images/profile.jpg') }}" alt="Muhammed Abnan" class="profile-img">
+            <h1>Hello, I'm <span class="neon-text">Muhammed Abnan</span></h1>
+            <p>A Passionate <strong>AI Engineer, Full-Stack Developer, and Game Developer</strong></p>
+            <a href="{{ url_for('projects') }}" class="btn">View Projects</a>
+        </div>
+    </section>
+
+</body>
+</html>
