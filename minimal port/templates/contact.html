@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me - Muhammed Abnan</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('projects') }}">Projects</a></li>
+                <li><a href="{{ url_for('about') }}">About</a></li>
+                <li><a href="{{ url_for('contact') }}" class="active">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Feel free to reach out for collaborations, projects, or any inquiries.</p>
+
+        <!-- Contact Form -->
+        <form action="{{ url_for('save_message') }}" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+
+        <!-- Success Message -->
+        {% if success %}
+            <p class="success-msg">✅ Message sent successfully!</p>
+        {% endif %}
+
+        <!-- Social Links -->
+        <div class="social-links">
+            <a href="https://github.com/MAbnan" target="_blank" class="social-btn">GitHub</a>
+            <a href="https://linkedin.com/in/muhammed-abnan-496900334/" target="_blank" class="social-btn">LinkedIn</a>
+            <a href="mailto:muhammedabnan7654@gmail.com" class="social-btn">Email Me</a>
+        </div>
+    </section>
+
+</body>
+</html>
