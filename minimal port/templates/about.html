@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Muhammed Abnan</title>
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('projects') }}" class="active">Projects</a></li>
+                <li><a href="{{ url_for('about') }}">About</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about">
+        <div class="about-container">
+            <div class="profile">
+                <img src="static/images/profile.jpg" alt="Muhammed Abnan">
+            </div>
+            <div class="bio">
+                <h2>About Me</h2>
+                <p>I'm <strong>Muhammed Abnan</strong>, an **AI Engineer, Full-Stack Developer, and Game Developer** with expertise in **Machine Learning, Web Development, and Game Engine Design**.</p>
+            </div>
+        </div>
+
+        <div class="about-section">
+            <h2>🚀 What I Do</h2>
+            <p>I specialize in **AI-powered applications, real-time simulations, and scalable backend systems**.</p>
+        </div>
+
+        <div class="about-section">
+            <h2>🏆 Key Projects</h2>
+            <ul>
+                <li>🩺 <strong>Disease Diagnosis System</strong> (AI-based medical analysis)</li>
+                <li>📄 <strong>AI-Powered Resume Analysis</strong> (LLM-based resume screening)</li>
+                <li>🚗 <strong>Self-Driving Car Simulation</strong> (Object detection & path planning)</li>
+                <li>🎮 <strong>Custom Game Engine (Python)</strong> (Physics & multiplayer support)</li>
+            </ul>
+        </div>
+
+        <div class="about-section">
+            <h2>💡 Key Skills</h2>
+            <div class="skills">
+                <span>Machine Learning (TensorFlow, RL, LLMs)</span>
+                <span>Full-Stack Development (Flask, PHP, MySQL)</span>
+                <span>Game Development (Panda3D, Bullet Physics)</span>
+                <span>AI-Powered Resume Analysis</span>
+                <span>Self-Driving Car Simulation</span>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
