@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Muhammed Abnan</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('projects') }}" class="active">Projects</a></li>
+                <li><a href="{{ url_for('about') }}">About</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="projects">
+        <h2>My Projects</h2>
+        <div class="project-grid">
+
+            <!-- Disease Diagnosis System -->
+            <div class="project">
+                <img src="{{ url_for('static', filename='images/disease-diagnosis.jpg') }}" alt="Disease Diagnosis System">
+                <h3>Disease Diagnosis System</h3>
+                <p>A TensorFlow-powered AI system for diagnosing diseases with a web-based UI.</p>
+            </div>
+
+            <!-- AI-Powered Resume Analysis -->
+            <div class="project">
+                <img src="{{ url_for('static', filename='images/resume-analysis.jpg') }}" alt="AI Resume Analysis">
+                <h3>AI-Powered Resume Analysis</h3>
+                <p>An LLM-based tool that provides AI-powered insights on resumes.</p>
+            </div>
+
+            <!-- Self-Driving Car Simulation -->
+            <div class="project">
+                <img src="{{ url_for('static', filename='images/self-driving-car.jpg') }}" alt="Self-Driving Car Simulation">
+                <h3>Self-Driving Car Simulation</h3>
+                <p>A simulated self-driving car with real-time object detection and dynamic path planning.</p>
+            </div>
+
+            <!-- Custom Game Engine (Python) -->
+            <div class="project">
+                <img src="{{ url_for('static', filename='images/game-engine.jpg') }}" alt="Custom Game Engine">
+                <h3>Custom Game Engine</h3>
+                <p>A Python-based game engine with advanced physics, rendering, and multiplayer support.</p>
+            </div>
+
+        </div>
+    </section>
+
+</body>
+</html>
